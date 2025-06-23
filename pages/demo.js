@@ -7,6 +7,9 @@ import FeatureGrid from '../components/FeatureGrid';
 import Testimonials from '../components/Testimonials';
 import PricingTable from '../components/PricingTable';
 import FAQAccordion from '../components/FAQAccordion';
+import UserProfile from '../components/UserProfile';
+import StoryList from '../components/StoryList';
+import StoryPreview from '../components/StoryPreview';
 import Footer from '../components/Footer';
 
 export default function Demo() {
@@ -44,6 +47,9 @@ export default function Demo() {
         <Testimonials />
         <PricingTable />
         <FAQAccordion />
+        <UserProfile />
+        <StoryList />
+        <StoryPreview />
       </main>
       <Footer />
     </div>
