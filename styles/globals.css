@@ -49,3 +49,30 @@
   --color-accent: #10b981;
   --color-bg-section: #fef9c3;
 }
+
+.typing {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  animation: typing 6s steps(40, end) infinite, blink 1s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
