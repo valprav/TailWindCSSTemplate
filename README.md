@@ -2,6 +2,8 @@
 
 This project provides a simple Next.js starter styled entirely with Tailwind CSS. It includes reusable components like a navigation bar, hero section, feature grid, testimonials, pricing table, FAQ accordion, and footer.
 
+The template uses a bright, kid-friendly color palette and the "Quicksand" font to create a playful look perfect for young readers.
+
 ## Getting Started
 1. Install dependencies
    ```bash
