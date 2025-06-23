@@ -30,6 +30,9 @@ export default function Demo() {
           <option value="theme-forest">Forest</option>
           <option value="theme-sunset">Sunset</option>
           <option value="theme-berry">Berry</option>
+          <option value="theme-ocean">Ocean</option>
+          <option value="theme-candy">Candy</option>
+          <option value="theme-lemonade">Lemonade</option>
         </select>
       </div>
       <Navbar />

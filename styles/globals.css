@@ -29,3 +29,23 @@
   --color-accent: #f472b6;
   --color-bg-section: #f5f3ff;
 }
+.theme-ocean {
+  --color-primary: #0284c7;
+  --color-secondary: #7dd3fc;
+  --color-accent: #22d3ee;
+  --color-bg-section: #e0f2fe;
+}
+
+.theme-candy {
+  --color-primary: #ec4899;
+  --color-secondary: #fbcfe8;
+  --color-accent: #f59e0b;
+  --color-bg-section: #fff1f2;
+}
+
+.theme-lemonade {
+  --color-primary: #d97706;
+  --color-secondary: #fde68a;
+  --color-accent: #10b981;
+  --color-bg-section: #fef9c3;
+}
