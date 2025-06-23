@@ -58,6 +58,14 @@
   animation: typing 6s steps(40, end) infinite, blink 1s step-end infinite;
 }
 
+.typing-multi {
+  width: 100%;
+  white-space: pre-line;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  animation: typing 6s steps(40, end) infinite, blink 1s step-end infinite;
+}
+
 @keyframes typing {
   from {
     width: 0;
