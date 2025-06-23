@@ -105,10 +105,11 @@
 .storybook {
   position: relative;
   border: 4px solid #fff;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.8);
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  aspect-ratio: 11 / 8;
 }
 .storybook::before,
 .storybook::after {
@@ -138,7 +139,24 @@
   animation: typing-story 12s steps(90, end) forwards, blink 1s step-end infinite;
 }
 
+.typing-book {
+  width: 100%;
+  white-space: pre-line;
+  overflow: hidden;
+  border-right: 2px solid #000;
+  animation: typing-book 14s steps(190, end) forwards, blink 1s step-end infinite;
+}
+
 @keyframes typing-story {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-book {
   from {
     width: 0;
   }
