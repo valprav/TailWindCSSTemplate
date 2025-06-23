@@ -25,46 +25,63 @@ export default function StoryGenerator() {
     return 'absolute inset-0 transition-all duration-700 transform translate-x-full opacity-0 pointer-events-none';
   };
 
+  const headings = [
+    'Upload Photo or Describe Your Child',
+    'Tell Us About Your Child',
+    'Choose Story Type',
+    'Select Theme and Length',
+  ];
+
   return (
     <section id="generator" className="py-20 bg-[var(--color-bg-section)]">
-      <div className="max-w-xl mx-auto px-4">
-        <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">
-          Create Your Story
-        </h2>
-        <div className="relative h-96 overflow-hidden">
+      <div className="max-w-4xl mx-auto h-[36rem] flex items-center justify-center px-4">
+        <div className="relative w-[65%] h-full bg-white rounded-3xl shadow-2xl p-6 pt-20">
+          <div className="absolute left-1/2 top-[10%] -translate-x-1/2 w-4/5 h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-[var(--color-primary)] transition-all duration-700"
+              style={{ width: `${((step - 1) / 3) * 100}%` }}
+            />
+          </div>
+          <h3 className="text-xl font-semibold text-center mb-6">
+            {headings[step - 1]}
+          </h3>
+          <div className="relative flex-grow overflow-hidden">
           {/* Step 1 */}
           <div className={stepClass(1)}>
-            <div className="border-2 border-dashed rounded-lg p-6 text-center mb-6 bg-white shadow animate-pulse">
-              <p className="mb-2 font-medium">Upload Photo</p>
-              <input id="avatar" type="file" className="mx-auto" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <label className="flex flex-col items-center justify-center h-32 border-2 border-dashed rounded-lg bg-white shadow-md cursor-pointer hover:shadow-lg">
+                <span className="mb-2 font-medium">Upload Photo</span>
+                <input type="file" className="hidden" />
+              </label>
+              <div className="flex flex-col h-32 border-2 border-dashed rounded-lg bg-white shadow-md p-4">
+                <label htmlFor="description" className="mb-2 font-medium text-center">
+                  Describe Your Child
+                </label>
+                <textarea
+                  id="description"
+                  className="flex-1 resize-none bg-transparent outline-none"
+                  placeholder="Describe appearance"
+                />
+              </div>
             </div>
-            <label htmlFor="description" className="block mb-2 font-medium">
-              Or Describe Your Child
-            </label>
-            <textarea
-              id="description"
-              rows="3"
-              className="w-full border rounded-md p-2"
-              placeholder="Describe your child's appearance"
-            />
           </div>
 
           {/* Step 2 */}
           <div className={stepClass(2)}>
-            <div className="space-y-4 bg-white p-4 rounded-lg shadow animate-fade-in">
-              <div>
+            <div className="space-y-4 animate-fade-in">
+              <div className="bg-white rounded-lg shadow p-4">
                 <label htmlFor="name" className="block mb-1 font-medium">
                   Name
                 </label>
-                <input id="name" type="text" className="w-full border rounded-md p-2" />
+                <input id="name" type="text" className="w-full border-none bg-transparent focus:outline-none" />
               </div>
-              <div>
+              <div className="bg-white rounded-lg shadow p-4">
                 <label htmlFor="age" className="block mb-1 font-medium">
                   Age
                 </label>
-                <input id="age" type="number" className="w-full border rounded-md p-2" />
+                <input id="age" type="number" className="w-full border-none bg-transparent focus:outline-none" />
               </div>
-              <div>
+              <div className="bg-white rounded-lg shadow p-4">
                 <p className="mb-1 font-medium">Interests</p>
                 <div className="flex flex-wrap gap-2">
                   {interestOptions.map((opt) => (
@@ -106,7 +123,7 @@ export default function StoryGenerator() {
           {/* Step 4 */}
           <div className={stepClass(4)}>
             <div className="space-y-4">
-              <div>
+              <div className="bg-white rounded-lg shadow p-4">
                 <p className="mb-2 font-medium">Theme</p>
                 <div className="grid grid-cols-2 gap-3">
                   {themes.map((t) => (
@@ -126,7 +143,7 @@ export default function StoryGenerator() {
                   ))}
                 </div>
               </div>
-              <div>
+              <div className="bg-white rounded-lg shadow p-4">
                 <label htmlFor="size" className="block mb-1 font-medium">
                   Story Length
                 </label>
@@ -169,6 +186,7 @@ export default function StoryGenerator() {
             </button>
           )}
         </div>
+      </div>
       </div>
     </section>
   );
