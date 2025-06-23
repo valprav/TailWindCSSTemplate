@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
+import StoryGenerator from '../components/StoryGenerator';
 import FeatureGrid from '../components/FeatureGrid';
 import Testimonials from '../components/Testimonials';
 import PricingTable from '../components/PricingTable';
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <StoryGenerator />
         <FeatureGrid />
         <Testimonials />
         <PricingTable />

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
+import StoryGenerator from '../components/StoryGenerator';
 import FeatureGrid from '../components/FeatureGrid';
 import Testimonials from '../components/Testimonials';
 import PricingTable from '../components/PricingTable';
@@ -38,6 +39,7 @@ export default function Demo() {
       <Navbar />
       <main className="space-y-20">
         <HeroSection />
+        <StoryGenerator />
         <FeatureGrid />
         <Testimonials />
         <PricingTable />
