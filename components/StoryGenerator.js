@@ -35,7 +35,7 @@ export default function StoryGenerator() {
   return (
     <section id="generator" className="py-20 bg-[var(--color-bg-section)]">
       <div className="max-w-4xl mx-auto h-[36rem] flex items-center justify-center px-4">
-        <div className="relative w-[65%] h-full bg-white rounded-3xl shadow-2xl p-6 pt-20">
+        <div className="relative w-[65%] h-full bg-white rounded-3xl shadow-2xl p-6 pt-20 flex flex-col">
           <div className="absolute left-1/2 top-[10%] -translate-x-1/2 w-4/5 h-2 bg-gray-200 rounded-full overflow-hidden">
             <div
               className="h-full bg-[var(--color-primary)] transition-all duration-700"
@@ -45,7 +45,7 @@ export default function StoryGenerator() {
           <h3 className="text-xl font-semibold text-center mb-6">
             {headings[step - 1]}
           </h3>
-          <div className="relative flex-grow overflow-hidden">
+          <div className="relative flex-grow overflow-hidden mt-4">
           {/* Step 1 */}
           <div className={stepClass(1)}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -59,7 +59,7 @@ export default function StoryGenerator() {
                 </label>
                 <textarea
                   id="description"
-                  className="flex-1 resize-none bg-transparent outline-none"
+                  className="flex-1 resize-none bg-gray-50 border border-gray-300 rounded p-2 outline-none"
                   placeholder="Describe appearance"
                 />
               </div>
@@ -73,13 +73,13 @@ export default function StoryGenerator() {
                 <label htmlFor="name" className="block mb-1 font-medium">
                   Name
                 </label>
-                <input id="name" type="text" className="w-full border-none bg-transparent focus:outline-none" />
+                <input id="name" type="text" className="w-full bg-gray-50 border border-gray-300 rounded p-2 focus:outline-none" />
               </div>
               <div className="bg-white rounded-lg shadow p-4">
                 <label htmlFor="age" className="block mb-1 font-medium">
                   Age
                 </label>
-                <input id="age" type="number" className="w-full border-none bg-transparent focus:outline-none" />
+                <input id="age" type="number" className="w-full bg-gray-50 border border-gray-300 rounded p-2 focus:outline-none" />
               </div>
               <div className="bg-white rounded-lg shadow p-4">
                 <p className="mb-1 font-medium">Interests</p>
@@ -152,7 +152,7 @@ export default function StoryGenerator() {
                   type="range"
                   min="1"
                   max="3"
-                  className="w-full"
+                  className="w-full accent-[var(--color-primary)]"
                 />
                 <div className="flex justify-between text-sm mt-1">
                   <span>Short</span>
