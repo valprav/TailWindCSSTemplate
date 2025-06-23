@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.theme-sky {
+  --color-primary: #3b82f6;
+  --color-secondary: #f472b6;
+  --color-accent: #fbbf24;
+  --color-bg-section: #f0f9ff;
+}
+
+.theme-forest {
+  --color-primary: #047857;
+  --color-secondary: #6ee7b7;
+  --color-accent: #facc15;
+  --color-bg-section: #ecfdf5;
+}
+
+.theme-sunset {
+  --color-primary: #f97316;
+  --color-secondary: #fdba74;
+  --color-accent: #ef4444;
+  --color-bg-section: #fff7ed;
+}
+
+.theme-berry {
+  --color-primary: #8b5cf6;
+  --color-secondary: #d8b4fe;
+  --color-accent: #f472b6;
+  --color-bg-section: #f5f3ff;
+}

@@ -19,14 +19,14 @@ export default function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section id="faq" className="py-20 bg-yellow-50">
+    <section id="faq" className="py-20 bg-[var(--color-bg-section)]">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-yellow-200 rounded-lg">
+            <div key={index} className="border border-[color:var(--color-accent)] rounded-lg">
               <button
-                className="w-full px-4 py-3 flex justify-between items-center text-left focus:outline-none hover:bg-yellow-100"
+                className="w-full px-4 py-3 flex justify-between items-center text-left focus:outline-none hover:bg-[color:var(--color-accent)/0.1]"
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-${index}`}
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}

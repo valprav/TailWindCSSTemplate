@@ -9,7 +9,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="font-sans">
+      <body className="font-sans theme-sky">
         <Main />
         <NextScript />
       </body>
