@@ -8,7 +8,7 @@ import Testimonials from '../components/Testimonials';
 import PricingTable from '../components/PricingTable';
 import FAQAccordion from '../components/FAQAccordion';
 import UserProfile from '../components/UserProfile';
-import StoryList from '../components/StoryList';
+import StoryViewer from '../components/StoryViewer';
 import StoryPreview from '../components/StoryPreview';
 import Footer from '../components/Footer';
 
@@ -48,7 +48,7 @@ export default function Demo() {
         <PricingTable />
         <FAQAccordion />
         <UserProfile />
-        <StoryList />
+        <StoryViewer />
         <StoryPreview />
       </main>
       <Footer />
